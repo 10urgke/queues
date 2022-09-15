@@ -9,26 +9,27 @@ namespace Queue
         // Queue sınıfından bir nesne oluşturalım:
         System.Collections.Queue sira = new System.Collections.Queue();
 
-        // Nesnemize Enqueue metodu ile değerler girelim:
+        // Nesneye Enqueue() metodu ile değerler girelim:
         sira.Enqueue("1");
         sira.Enqueue("2");
         sira.Enqueue("3");
         sira.Enqueue("4");
         sira.Enqueue("5");
 
-        // sira isimli nesnemizin eleman sayısı:
+        // Sira isimli nesnemizin eleman sayısı:
         Console.WriteLine( "\n Eleman Sayısı: " + sira.Count);
 
-        // sira isimli nesnemizin elemanları:
+        
+        // Sira isimli nesnemizin elemanları:
         Console.WriteLine( "\n Elemanlar: " ); 
         SortBy( sira );
 
-        //sira isimli nesmemizden bir eleman alalım: 
+        //Sira isimli nesmemizden bir eleman alalım: 
         string eleman= (string)sira.Dequeue();
         Console.WriteLine(" \n Sırası gelen eleman: " + eleman);
 
-        //şimdi ise siranin en başındaki nesneyi öğrenelim.
-        // Ama onu siradan çıkartmayacağız:
+        //Simdi ise siranin en başındaki nesneyi öğrenelim.
+        //Ama onu siradan çıkartmayacağız:
         eleman= (string)sira.Peek();
         Console.WriteLine(" \n Sıradaki eleman " + eleman);
 
