@@ -1,13 +1,13 @@
 ﻿using System.Collections;
-namespace Queue
+namespace Tail
 {
     class Sira_Ornek1
 {
 
     public static void Main()
     {
-        // Queue sınıfından bir nesne oluşturalım:
-        System.Collections.Queue sira = new System.Collections.Queue();
+        // Tail sınıfından bir nesne oluşturalım:
+        Tail sira = new Tail();
 
         // Nesneye Enqueue() metodu ile değerler girelim:
         sira.Enqueue("1");
@@ -19,11 +19,6 @@ namespace Queue
         // Sira isimli nesnemizin eleman sayısı:
         Console.WriteLine( "\n Eleman Sayısı: " + sira.Count);
 
-        
-        // Sira isimli nesnemizin elemanları:
-        Console.WriteLine( "\n Elemanlar: " ); 
-        SortBy( sira );
-
         //Sira isimli nesmemizden bir eleman alalım: 
         string eleman= (string)sira.Dequeue();
         Console.WriteLine(" \n Sırası gelen eleman: " + eleman);
@@ -32,19 +27,10 @@ namespace Queue
         //Ama onu siradan çıkartmayacağız:
         eleman= (string)sira.Peek();
         Console.WriteLine(" \n Sıradaki eleman " + eleman);
-
-    }
-    
-    
-
-    public static void SortBy( IEnumerable Collection ) 
-    {
-        IEnumerator Enum = Collection.GetEnumerator();
-
-        while ( Enum.MoveNext() )
-            Console.Write( "\t{0}", Enum.Current );
-
-        Console.WriteLine();
+        
+        sira.Clear();
+        Console.WriteLine($" \n Elemanlar silindi eleman sayısı = {sira.Count}");
+        
     }
 }
 }

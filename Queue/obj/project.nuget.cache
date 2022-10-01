@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GbkZSkRRdXX9V8Xom7Iz/OfaS9BTwof1t6kRLm737uHndBtnhDr4poM+35zufZCPKk+LWL7zm+ogeiwT2HsgyA==",
+  "dgSpecHash": "WyZGcU7B9OgMJLODgx8T0DAIHbn7k0z3eaC/fwhbAntcJe5ZwzfTALDxtQt6Vd0on6rOD6nbTXFIyR89yReXPw==",
   "success": true,
-  "projectFilePath": "/Users/onurgokce/RiderProjects/queues/Queue/Queue.csproj",
+  "projectFilePath": "/Users/onurgokce/RiderProjects/queues2/Queue/Queue.csproj",
   "expectedPackageFiles": [
     "/Users/onurgokce/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/onurgokce/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",

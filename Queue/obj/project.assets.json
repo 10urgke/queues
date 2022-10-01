@@ -1658,11 +1658,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/onurgokce/RiderProjects/queues/Queue/Queue.csproj",
+      "projectUniqueName": "/Users/onurgokce/RiderProjects/queues2/Queue/Queue.csproj",
       "projectName": "Queue",
-      "projectPath": "/Users/onurgokce/RiderProjects/queues/Queue/Queue.csproj",
+      "projectPath": "/Users/onurgokce/RiderProjects/queues2/Queue/Queue.csproj",
       "packagesPath": "/Users/onurgokce/.nuget/packages/",
-      "outputPath": "/Users/onurgokce/RiderProjects/queues/Queue/obj/",
+      "outputPath": "/Users/onurgokce/RiderProjects/queues2/Queue/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/onurgokce/.nuget/NuGet/NuGet.Config"
