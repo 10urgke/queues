@@ -7,7 +7,7 @@ public class Tail
     {
         private object?[] _array;
         private int _head; // Kuyruktaki ilk geçerli öğe
-        private int _tail; // Kuyruktaki son geçerli öğe.
+        private int _last; // Kuyruktaki son geçerli öğe.
         private int _size; // Eleman sayısı.
         
         /// <summary>
@@ -35,7 +35,7 @@ public class Tail
 
             _array = new object[capacity];
             _head = 0;
-            _tail = 0;
+            _last = 0;
             _size = 0;
             _growFactor = (int)(growFactor * 100);
         }
@@ -50,19 +50,19 @@ public class Tail
         {
             if (_size != 0)
             {
-                if (_head < _tail)
+                if (_head < _last)
                     Array.Clear(_array, _head, _size);
                 else
                 {
                     Array.Clear(_array, _head, _array.Length - _head);
-                    Array.Clear(_array, 0, _tail);
+                    Array.Clear(_array, 0, _last);
                 }
 
                 _size = 0;
             }
 
             _head = 0;
-            _tail = 0;
+            _last = 0;
         }
         
         // Kuyruğun sonuna nesne ekler.
@@ -78,8 +78,8 @@ public class Tail
                 SetCapacity(newcapacity);
             }
 
-            _array[_tail] = obj;
-            _tail = (_tail + 1) % _array.Length;
+            _array[_last] = obj;
+            _last = (_last + 1) % _array.Length;
             _size++;
         }
         
@@ -111,19 +111,19 @@ public class Tail
             object[] newarray = new object[capacity];
             if (_size > 0)
             {
-                if (_head < _tail)
+                if (_head < _last)
                 {
                     Array.Copy(_array, _head, newarray, 0, _size);
                 }
                 else
                 {
                     Array.Copy(_array, _head, newarray, 0, _array.Length - _head);
-                    Array.Copy(_array, 0, newarray, _array.Length - _head, _tail);
+                    Array.Copy(_array, 0, newarray, _array.Length - _head, _last);
                 }
             }
 
             _array = newarray;
             _head = 0;
-            _tail = (_size == capacity) ? 0 : _size;
+            _last = (_size == capacity) ? 0 : _size;
         }
     }
